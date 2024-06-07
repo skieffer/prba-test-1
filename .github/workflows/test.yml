@@ -1,0 +1,19 @@
+name: test
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      content-vers:
+        description: "version at which to build"
+        type: string
+        default: "WIP"
+jobs:
+  build-test:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Build
+        uses: proofscape/pfsc-repo-build-action@v2
+        with:
+          pise-vers: 0.29.1
+          content-vers: ${{inputs.content-vers || 'WIP' }}
