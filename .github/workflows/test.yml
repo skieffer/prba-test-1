@@ -13,7 +13,6 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Build
-        uses: proofscape/pfsc-repo-build-action@v2
+        uses: proofscape/pfsc-repo-build-action@v3.0.0-a0
         with:
-          pise-vers: 0.29.1
           content-vers: ${{inputs.content-vers || 'WIP' }}
