@@ -1,6 +1,6 @@
 anno Foo @@@
 <param:>[]{
     ptype: 'Prime',
-    name: 'p',
+    tex: 'p',
 }
 @@@
